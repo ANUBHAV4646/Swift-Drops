@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - SwiftDrops</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #222;
+            text-align: center;
+        }
+        header {
+            background-color: #ffa931;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        nav {
+            margin-top: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+        section {
+            background-color: #ffffff;
+            margin: 50px auto;
+            padding: 30px;
+            border-radius: 8px;
+            width: 350px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        section h2 {
+            color: #ff862e;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        input[type="text"], input[type="password"], input[type="email"] {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        button {
+            background-color: #ffa931;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+            width: 100%;
+        }
+        p a {
+            color: #ffa931;
+            text-decoration: none;
+        }
+        footer {
+            background-color: #444;
+            color: #f1f1f1;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+   <script>
+    function validateRegister() {
+        if (username === "" || email === "" || password === "" || confirmPassword === "") {
+            alert("Please fill out all fields.");
+            return false;
+        }
+        
+        alert("Registration successful!");
+        return true;
+    }
+</script>
+</head>
+<body>
+
+<header>
+    <h1>SwiftDrops Registration</h1>
+    <nav>
+        <a href="home page.html">Home</a>
+    </nav>
+</header>
+
+<section>
+    <h2>Create Your Account</h2>
+    <form onsubmit="return validateRegister()">
+        <input type="text" placeholder="Username" required>
+        <input type="email" placeholder="Email Address" required>
+        <input type="password" placeholder="Password" required>
+        <input type="password" placeholder="Confirm Password" required>
+        
+        <label>
+            <input type="checkbox"> I agree to the Terms and Conditions
+        </label>
+        
+        <button type="submit">Register</button>
+    </form>
+    
+    <p>Already have an account? <a href="Login.html">Login here</a></p>
+</section>
+
+<footer>
+    <p>&copy; 2024 SwiftDrops. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
